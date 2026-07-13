@@ -1,0 +1,15 @@
+# Netlify configuration for the SPACERA Next.js site.
+# The official Next.js Runtime plugin handles SSR/ISR pages, the /api/contact
+# route (as a serverless function), next/image optimisation, redirects, and
+# headers automatically — no extra wiring needed.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  # Pin the Node version Netlify builds with (matches local: Node 22).
+  NODE_VERSION = "22"
