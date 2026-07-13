@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-base text-ink dark:bg-dark-base dark:text-dark-ink;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  ::selection {
+    @apply bg-accent/25 text-ink dark:text-dark-ink;
+  }
+}
+
+@layer components {
+  /* Consistent page gutter + max width for the studio-style spacious layout. */
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+  }
+
+  .section {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.25em] text-accent;
+  }
+
+  .heading {
+    @apply font-medium tracking-tight text-ink dark:text-dark-ink;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium transition-all duration-300 ease-out-expo focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-white shadow-soft hover:bg-primary/90 hover:shadow-soft-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply btn border border-ink/20 bg-transparent text-ink hover:border-ink/40 hover:bg-ink/5 dark:border-dark-ink/25 dark:text-dark-ink dark:hover:bg-white/5;
+  }
+  .btn-light {
+    @apply btn bg-white/90 text-ink backdrop-blur hover:bg-white;
+  }
+}
+
+/* Scrollbar (subtle, brand-tinted) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(138, 102, 69, 0.35);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 102, 69, 0.55);
+}
+
+/* Skeleton shimmer for lazy images */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: rgba(138, 102, 69, 0.08);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  animation: shimmer 1.6s infinite;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Swiper overrides to match the brand */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #8a6645 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #8a6645 !important;
+}
