@@ -81,7 +81,7 @@ export default function ProjectDetail({ project, related }) {
                 </span>
               ))}
             </div>
-            <h1 className="mt-4 text-4xl font-medium leading-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 text-4xl font-light leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
               {project.title}
             </h1>
             <p className="mt-3 flex items-center gap-2 text-white/75">
@@ -155,6 +155,7 @@ export default function ProjectDetail({ project, related }) {
       </section>
 
       {/* Moodboard */}
+      {project.moodboard?.length > 0 && (
       <section className="bg-secondary/20 py-20 dark:bg-dark-surface/40 md:py-24">
         <div className="container-x">
           <SectionHeading eyebrow="The direction" title="Moodboard" />
@@ -180,6 +181,7 @@ export default function ProjectDetail({ project, related }) {
           </motion.div>
         </div>
       </section>
+      )}
 
       {/* Before & After */}
       {project.beforeAfter && (

@@ -36,7 +36,7 @@ export default function CTASection({
 
           <div className="relative mx-auto max-w-2xl">
             <span className="eyebrow text-accent">{eyebrow}</span>
-            <h2 className="mt-4 text-3xl font-medium leading-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mt-4 text-3xl font-light leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
               {title}
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-white/75">{subtitle}</p>

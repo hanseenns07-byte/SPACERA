@@ -5,7 +5,7 @@ import {
   FiYoutube,
   FiClock,
   FiZap,
-  FiMapPin,
+  FiPhone,
 } from "react-icons/fi";
 import { FaTiktok, FaWhatsapp } from "react-icons/fa";
 import PageBanner from "@/components/PageBanner";
@@ -29,6 +29,12 @@ export default function ContactPage() {
 
   // Elegant contact cards.
   const cards = [
+    {
+      icon: FiPhone,
+      label: "Phone / WhatsApp",
+      value: site.phone,
+      href: waLink,
+    },
     {
       icon: FiMail,
       label: "Email",
@@ -140,28 +146,6 @@ export default function ContactPage() {
               <div className="mt-8">
                 <ContactForm />
               </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Map */}
-      <section className="pb-20 md:pb-28">
-        <div className="container-x">
-          <Reveal>
-            <div className="mb-6 flex items-center gap-2 text-ink/70 dark:text-dark-ink/70">
-              <FiMapPin className="h-5 w-5 text-primary dark:text-accent" />
-              <span className="font-medium">{site.address}</span>
-            </div>
-            <div className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl shadow-soft">
-              <iframe
-                title="SPACERA location"
-                src={site.mapEmbed}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 h-full w-full border-0 grayscale-[0.2]"
-                allowFullScreen
-              />
             </div>
           </Reveal>
         </div>

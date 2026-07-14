@@ -30,7 +30,7 @@ export default function PageBanner({ eyebrow, title, subtitle, image, breadcrumb
           {eyebrow && (
             <span className="eyebrow text-accent">{eyebrow}</span>
           )}
-          <h1 className="mt-3 text-4xl font-medium leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-3 text-4xl font-light leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           {subtitle && (

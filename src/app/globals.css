@@ -33,8 +33,12 @@
     @apply text-xs font-medium uppercase tracking-[0.25em] text-accent;
   }
 
+  /* Display headings: light weight + tight tracking for an editorial,
+     architecture-studio feel (deliberately not the heavy bold of a default
+     landing page). Poppins is brand-mandated, so the personality comes from
+     weight, scale, and spacing rather than a different face. */
   .heading {
-    @apply font-medium tracking-tight text-ink dark:text-dark-ink;
+    @apply font-light tracking-tight text-ink dark:text-dark-ink;
   }
 
   /* Buttons */
