@@ -9,8 +9,8 @@ export const site = {
   description:
     "Interior Design for Small Spaces. Japandi, Modern Minimalist, Functional Interior Design.",
   email: "idspacera@gmail.com",
-  phone: "+62 812-0000-0000",
-  whatsapp: "6281200000000", // digits only, used for wa.me links
+  phone: "+62 851-5904-7718",
+  whatsapp: "6285159047718", // digits only, used for wa.me chat links
   whatsappMessage:
     "Hi SPACERA, I'd like to discuss my interior design project.",
   location: "Jakarta, Indonesia",
@@ -21,8 +21,6 @@ export const site = {
     { day: "Sunday", hours: "Closed" },
   ],
   responseTime: "Within 24 hours",
-  mapEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.5!2d106.68!3d-6.229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJakarta!5e0!3m2!1sen!2sid!4v1700000000000",
   social: [
     {
       name: "Instagram",

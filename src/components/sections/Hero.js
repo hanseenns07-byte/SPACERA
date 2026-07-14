@@ -62,14 +62,15 @@ export default function Hero() {
         >
           <motion.span
             variants={item}
-            className="inline-block rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/90 backdrop-blur"
+            className="inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.32em] text-white/85"
           >
+            <span className="h-px w-10 bg-accent" />
             Japandi · Minimalist · Functional
           </motion.span>
 
           <motion.h1
             variants={item}
-            className="mt-6 text-4xl font-medium leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
+            className="mt-6 text-4xl font-light leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
           >
             Designing Better Spaces,
             <br />
