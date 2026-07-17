@@ -1,16 +1,22 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollProgress from "@/components/ScrollProgress";
-import FloatingActions from "@/components/FloatingActions";
+import SiteFrame from "@/components/SiteFrame";
 
 // Poppins via next/font — self-hosted, zero layout shift, exposed as a CSS var.
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
+  display: "swap",
+});
+
+// Cormorant Garamond — the editorial display serif used across the landing.
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -90,7 +96,11 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${cormorant.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         {/* Set theme before paint to avoid a flash of the wrong mode. */}
         <script
@@ -104,11 +114,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-sans antialiased">
-        <ScrollProgress />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <FloatingActions />
+        <SiteFrame>{children}</SiteFrame>
       </body>
     </html>
   );
